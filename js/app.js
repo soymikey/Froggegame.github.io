@@ -1,4 +1,5 @@
-// Enemies our player must avoid
+'use strict;'
+//Enemy contructor function
 var Enemy = function() {
     this.row=[80,160,240];//array of staring row
     this.x=Math.floor(Math.random()*-500);//random starting point
@@ -18,7 +19,7 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
-
+// create Player construnctor function
 var Player=function(){
   this.x = 200;
   this.y = 400;
@@ -81,7 +82,7 @@ else if (key=='down') {
   }
 }
 
-// use constructor functio to create enemy and player
+// use constructor function to create enemy and player
 var player= new Player();
 var allEnemies=[];
 for (var i=7;i>allEnemies.length;){
